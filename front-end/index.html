@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>AdminSite</title>
+</head>
+
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="/" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon selectedE'></i> Dashboard</a></li>
+			<li class="divider" data-text="Administrador DB">Administrador de bases de datos</li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-graduation icon selectedE'></i> academic_area</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-cog icon selectedE'></i> admin_area</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-cube icon selectedE'></i> areas</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-pencil icon selectedE'></i> campers</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bx-intersect icon selectedE'></i> chapters</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-business icon selectedE'></i> cities</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-contact icon selectedE'></i> contact_info</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-map icon selectedE'></i> countries</a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-pen icon selectedE'></i>design_area </a></li>
+			<li class="selectedE"><a href="#"><i class='bx bxs-ambulance icon selectedE'></i>emergency_contact </a></li>
+			<li class="divider" data-text="table and forms">Table and forms</li>
+			<li>
+				<a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">academic_area</a></li>
+					<li><a href="#">admin_area</a></li>
+					<li><a href="#">areas</a></li>
+					<li><a href="#">campers</a></li>
+					<li><a href="#">chapters</a></li>
+					<li><a href="#">cities</a></li>
+					<li><a href="#">contact_info</a></li>
+					<li><a href="#">countries</a></li>
+					<li><a href="#">esign_area </a></li>
+					<li><a href="#">emergency_contact </a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar'></i>
+			<form action="#">
+
+			</form>
+
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+					alt="">
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon'></i> Profile</a></li>
+					<li><a href="#"><i class='bx bxs-cog'></i> Settings</a></li>
+					<li><a href="#"><i class='bx bxs-log-out-circle'></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main id = "main">
+			<h1 class="title">Dashboard</h1>
+			<ul class="breadcrumbs">
+				<li><a href="#">Home</a></li>
+				<li class="divider">/</li>
+				<li><a href="#" class="active">Dashboard</a></li>
+			</ul>
+			<div class="data">
+				<div class="content-data">
+					<div class="head">
+						<h3>main entrance</h3>
+					</div>
+					<!-- conteido -->
+					<h4>Bienvenido!!!</h4>
+					<br>
+					<p>Esto es un administrador de base de datos (DBA) es un profesional responsable del diseño,
+						implementación, mantenimiento y seguridad de las bases de datos. Los DBA trabajan con una amplia
+						variedad de bases de datos, incluidas bases de datos relacionales, bases de datos NoSQL y bases
+						de datos basadas en la nube.</p>
+
+				</div>
+
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+	<script src="app.js" defer type="module"></script>
+	<script src="main.js" async></script>
+	<script src="./components/sidebar.js" defer type="module"></script>
+	<script src="./components/panel.js" defer type="module"></script>
+</body>
+
+</html>

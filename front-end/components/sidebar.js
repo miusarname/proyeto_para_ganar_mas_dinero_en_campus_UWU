@@ -1,0 +1,91 @@
+class Sidebar extends HTMLElement{
+
+    constructor(){
+        super();
+        this.valueToActive=null;
+        this.activatedComp=null;
+    }
+
+    static get observedAttributes() {
+        return ["valueToActive"];
+      }
+
+    attributeChangedCallback(nameAtr, oldValue, newValue) {
+        switch (nameAtr) {
+          case "valueToActive":
+            this.valueToActive = newValue;
+            break;
+        }
+      }
+
+    connectedCallback(){
+        switch (this.valueToActive) {
+    case 'academic_area':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#" class="active"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'admin_area':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#" class="active"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'areas':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#" class="active"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'campers':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#" class="active"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'chapters':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#" class="active"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'cities':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#" class="active"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'contact_info':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#" class="active"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'countries':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#" class="active"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'design_area':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#" class="active"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    case 'emergency_contact':
+        this.innerHTML = `<a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a><ul class="side-menu"><li><a href="#"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li><li class="divider" data-text="Administrador DB">Administrador de bases de datos</li><li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li><li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li><li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li><li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li><li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li><li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li><li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li><li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li><li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li><li><a href="#" class="active"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li><li class="divider" data-text="table and forms">Table and forms</li><li><a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a><ul class="side-dropdown"><li><a href="#">academic_area</a></li><li><a href="#">admin_area</a></li><li><a href="#">areas</a></li><li><a href="#">campers</a></li><li><a href="#">chapters</a></li><li><a href="#">cities</a></li><li><a href="#">contact_info</a></li><li><a href="#">countries</a></li><li><a href="#">esign_area </a></li><li><a href="#">emergency_contact </a></li></ul></li></ul>`;
+        break;
+    default:
+        this.innerHTML = `
+        <a href="#" class="brand"><i class='bx bxs-data icon'></i>phpMyAdmin</a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
+			<li class="divider" data-text="Administrador DB">Administrador de bases de datos</li>
+			<li><a href="#"><i class='bx bxs-graduation icon'></i> academic_area</a></li>
+			<li><a href="#"><i class='bx bxs-cog icon'></i> admin_area</a></li>
+			<li><a href="#"><i class='bx bxs-cube icon'></i> areas</a></li>
+			<li><a href="#"><i class='bx bxs-pencil icon'></i> campers</a></li>
+			<li><a href="#"><i class='bx bx-intersect icon'></i> chapters</a></li>
+			<li><a href="#"><i class='bx bxs-business icon'></i> cities</a></li>
+			<li><a href="#"><i class='bx bxs-contact icon'></i> contact_info</a></li>
+			<li><a href="#"><i class='bx bxs-map icon'></i> countries</a></li>
+			<li><a href="#"><i class='bx bxs-pen icon'></i>design_area </a></li>
+			<li><a href="#"><i class='bx bxs-ambulance icon'></i>emergency_contact </a></li>
+			<li class="divider" data-text="table and forms">Table and forms</li>
+			<li>
+				<a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bx-chevron-right icon-right'></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">academic_area</a></li>
+					<li><a href="#">admin_area</a></li>
+					<li><a href="#">areas</a></li>
+					<li><a href="#">campers</a></li>
+					<li><a href="#">chapters</a></li>
+					<li><a href="#">cities</a></li>
+					<li><a href="#">contact_info</a></li>
+					<li><a href="#">countries</a></li>
+					<li><a href="#">esign_area </a></li>
+					<li><a href="#">emergency_contact </a></li>
+				</ul>
+			</li>
+		</ul>
+        `;
+        break;
+        
+}}}
+
+customElements.define("custom-sidebar", Sidebar);
