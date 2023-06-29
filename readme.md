@@ -1,5 +1,7 @@
 # Filtro Ojala me den + dinero....
 
+#### Oscar Mauricio Alvarez Gómez M3
+
 <br>
 
 # Nota importante solo funciona en consola,el front-end aun esta en desarrollo
