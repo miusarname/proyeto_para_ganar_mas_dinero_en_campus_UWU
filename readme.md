@@ -1,6 +1,11 @@
 # Filtro Ojala me den + dinero....
 
 #### Oscar Mauricio Alvarez Gómez M3
+### Recordatorio hacer siempre "git pull" para obtener la mejor version...
+
+```git
+git pull
+```
 
 <br>
 
