@@ -57,8 +57,7 @@ FOREIGN KEY (idDep) REFERENCES departamento(idDep);
 
 ALTER TABLE campers
 ADD CONSTRAINT campers
-FOREIGN KEY (idReg) REFERENCES region(idReg); + 2;
-}
+FOREIGN KEY (idReg) REFERENCES region(idReg);
 ```
 
 Claro tienes que estar ya en mysql en la consola, sino es así debes hacer esto primero para poder hacer lo otro:
